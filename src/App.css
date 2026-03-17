@@ -1,0 +1,353 @@
+/* ========== Layout & Component Classes ========== */
+
+/* --- Navbar --- */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  height: 56px;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-links a {
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-light);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--color-accent);
+  background: rgba(13, 148, 136, 0.06);
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--color-text-light);
+}
+
+.nav-right button {
+  padding: 6px 14px;
+  font-size: 13px;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-light);
+}
+
+.nav-right button:hover {
+  color: var(--color-danger);
+  border-color: var(--color-danger);
+  background: rgba(220, 38, 38, 0.04);
+}
+
+/* --- Page Container --- */
+.page-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  width: 100%;
+}
+
+.page-container-wide {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  width: 100%;
+}
+
+/* --- Page Title --- */
+.page-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: var(--color-text);
+}
+
+/* --- Card --- */
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+/* --- Stat Grid --- */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.stat-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 20px;
+  text-align: center;
+}
+
+.stat-card .stat-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-accent);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.stat-card .stat-label {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* --- Form --- */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+}
+
+/* --- Buttons --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+  gap: 6px;
+}
+
+.btn:hover {
+  background: var(--color-bg);
+}
+
+.btn-primary {
+  background: var(--color-accent);
+  color: #fff;
+  border-color: var(--color-accent);
+}
+
+.btn-primary:hover {
+  background: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-light);
+}
+
+.btn-secondary:hover {
+  border-color: #bbb;
+  background: var(--color-bg);
+}
+
+.btn-group {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+/* --- Queue Card --- */
+.queue-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 12px;
+  box-shadow: var(--shadow-sm);
+}
+
+.queue-card h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: var(--color-accent);
+}
+
+.queue-card p {
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+/* --- Appointment Item --- */
+.appointment-item {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  box-shadow: var(--shadow-sm);
+}
+
+.appointment-info {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  flex-wrap: wrap;
+}
+
+/* --- Status Badge --- */
+.status-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 12px;
+  text-transform: capitalize;
+}
+
+.status-waiting {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--color-warning);
+}
+
+.status-in_progress,
+.status-in-progress {
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--color-info);
+}
+
+.status-completed,
+.status-done {
+  background: rgba(22, 163, 74, 0.1);
+  color: var(--color-success);
+}
+
+/* --- Empty State --- */
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--color-text-muted);
+  font-size: 15px;
+}
+
+/* --- Error Message --- */
+.error-msg {
+  color: var(--color-danger);
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+/* --- Loading --- */
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: var(--color-text-muted);
+}
+
+/* --- Login Wrapper --- */
+.login-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 56px);
+  padding: 24px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-card h2 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* --- Section --- */
+.section {
+  margin-bottom: 20px;
+}
+
+.section h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* --- Clinic Header --- */
+.clinic-header {
+  margin-bottom: 20px;
+}
+
+.clinic-header h3 {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.clinic-header p {
+  font-size: 14px;
+}
+
+/* --- Date Filter --- */
+.date-filter {
+  margin-bottom: 20px;
+}
+
+.date-filter input {
+  max-width: 200px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 640px) {
+
+  .page-container,
+  .page-container-wide {
+    padding: 20px 16px;
+  }
+
+  .navbar {
+    padding: 0 16px;
+    height: 50px;
+  }
+
+  .nav-links {
+    gap: 2px;
+  }
+
+  .nav-links a {
+    padding: 4px 8px;
+    font-size: 13px;
+  }
+
+  .appointment-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .stat-grid {
+    grid-template-columns: 1fr;
+  }
+}
